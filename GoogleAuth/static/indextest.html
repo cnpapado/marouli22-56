@@ -1,0 +1,31 @@
+<!-- run this code on a local web server using python -m http.server 3000-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple static google sign in test</title>  
+  <h1>Hello there</h1>
+  <meta name="google-signin-client_id" content="206105248686-kjdpv0e7vks3keskchj6oe9sa6ul8l7e.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+
+
+<body>
+ 
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <script>
+    function onSignIn(googleUser) {
+      // get user profile information
+      console.log(googleUser.getBasicProfile())
+    }
+	function signOut() {
+  gapi.auth2.getAuthInstance().signOut().then(function() {
+    console.log('user signed out')
+  })
+}
+  </script> 
+  
+  
+</body>
+</html>
