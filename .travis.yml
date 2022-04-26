@@ -19,4 +19,4 @@ deploy:
   env: "Saas-env"
   bucket_name: "saas-veskoukis-demo-s3-bucket-fnveuibnv"
   on:
-    banch: stable
+    banch: master
